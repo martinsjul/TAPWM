@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pesquisa de Filme</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div id="app">
+    <div class="cinema-bg">
+      <div class="reel reel-left">🎞</div>
+      <div class="reel reel-right">🎞</div>
+    </div>
+
+    <main class="container" id="form-section">
+      <header class="header">
+        <div class="badge">🎬 Pesquisa de Estreia</div>
+        <h1>O que você achou do filme?</h1>
+        <p class="subtitle">Preencha os dados abaixo. <span id="counter">Participante 1 de 10</span></p>
+      </header>
+
+      <form id="survey-form" novalidate>
+        <div class="progress-bar">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+
+        <div class="field">
+          <label for="idade">Idade</label>
+          <input type="number" id="idade" min="1" max="120" placeholder="Ex: 25" required />
+        </div>
+
+        <div class="field">
+          <label>Sexo</label>
+          <div class="radio-group">
+            <label class="radio-card">
+              <input type="radio" name="sexo" value="masculino" required />
+              <span>♂ Masculino</span>
+            </label>
+            <label class="radio-card">
+              <input type="radio" name="sexo" value="feminino" />
+              <span>♀ Feminino</span>
+            </label>
+            <label class="radio-card">
+              <input type="radio" name="sexo" value="outros" />
+              <span>⚧ Outros</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Opinião sobre o filme</label>
+          <div class="opinion-group">
+            <label class="opinion-card" data-val="4">
+              <input type="radio" name="opiniao" value="4" required />
+              <div class="emoji">🤩</div>
+              <div class="label">Ótimo</div>
+            </label>
+            <label class="opinion-card" data-val="3">
+              <input type="radio" name="opiniao" value="3" />
+              <div class="emoji">😊</div>
+              <div class="label">Bom</div>
+            </label>
+            <label class="opinion-card" data-val="2">
+              <input type="radio" name="opiniao" value="2" />
+              <div class="emoji">😐</div>
+              <div class="label">Regular</div>
+            </label>
+            <label class="opinion-card" data-val="1">
+              <input type="radio" name="opiniao" value="1" />
+              <div class="emoji">😤</div>
+              <div class="label">Péssimo</div>
+            </label>
+          </div>
+        </div>
+
+        <div id="error-msg" class="error-msg hidden">⚠ Por favor, preencha todos os campos!</div>
+
+        <button type="submit" class="btn-next">
+          <span id="btn-label">Próximo →</span>
+        </button>
+      </form>
+    </main>
+
+    <section class="container hidden" id="results-section">
+      <header class="header">
+        <div class="badge">📊 Resultados</div>
+        <h1>Resumo da Pesquisa</h1>
+        <p class="subtitle">Dados de 10 participantes coletados</p>
+      </header>
+
+      <div class="results-grid" id="results-grid">
+      </div>
+
+      <button class="btn-next btn-reset" onclick="location.reload()">↺ Nova Pesquisa</button>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
