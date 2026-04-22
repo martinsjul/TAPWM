@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atividade 7 — Funções JS</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Atividade 7 — Funções JavaScript</h1>
+  </header>
+
+  <div class="container">
+
+    <div class="card">
+      <h2>Função 1</h2>
+      <h3>Retornar o maior de três números</h3>
+      <div class="input-row">
+        <input type="number" id="n1a" placeholder="Número 1" />
+        <input type="number" id="n1b" placeholder="Número 2" />
+        <input type="number" id="n1c" placeholder="Número 3" />
+        <button onclick="fn1()">Calcular</button>
+      </div>
+      <div class="result empty" id="r1">resultado aqui...</div>
+    </div>
+
+    <div class="card">
+      <h2>Função 2</h2>
+      <h3>Ordenar três números em ordem crescente</h3>
+      <div class="input-row">
+        <input type="number" id="n2a" placeholder="Número 1" />
+        <input type="number" id="n2b" placeholder="Número 2" />
+        <input type="number" id="n2c" placeholder="Número 3" />
+        <button onclick="fn2()">Ordenar</button>
+      </div>
+      <div class="result empty" id="r2">resultado aqui...</div>
+    </div>
+
+    <div class="card">
+      <h2>Função 3</h2>
+      <h3>Verificar se é palíndromo</h3>
+      <div class="input-row">
+        <input type="text" id="s3" placeholder="Ex: arara, ana, racecar..." />
+        <button onclick="fn3()">Verificar</button>
+      </div>
+      <div class="result empty" id="r3">resultado aqui...</div>
+    </div>
+
+    <div class="card">
+      <h2>Função 4</h2>
+      <h3>Verificar se a 2ª palavra é subconjunto da 1ª</h3>
+      <div class="input-row">
+        <input type="text" id="p4a" placeholder="Palavra principal" />
+        <input type="text" id="p4b" placeholder="Subconjunto?" />
+        <button onclick="fn4()">Verificar</button>
+      </div>
+      <div class="result empty" id="r4">resultado aqui...</div>
+    </div>
+
+    <div class="card">
+      <h2>Função 5</h2>
+      <h3>Retornar o dia da semana de uma data</h3>
+      <div class="input-row">
+        <input type="date" id="d5" />
+        <button onclick="fn5()">Verificar</button>
+      </div>
+      <div class="result empty" id="r5">resultado aqui...</div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
