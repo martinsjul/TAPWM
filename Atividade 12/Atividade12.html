@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Atividade 12 - Eventos</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 40px;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        #janela {
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+            cursor: pointer;
+            border: 3px solid #333;
+            border-radius: 8px;
+        }
+
+        p {
+            margin-top: 12px;
+            color: #555;
+            font-size: 14px;
+        }
+    </style>
+
+    <script>
+        var imagens = {
+            fechada:  "janela_fechada.png",
+            aberta:   "janela_aberta.png",
+            quebrada: "janela_quebrada.png"
+        };
+
+        var titulos = {
+            fechada:  "Janela Fechada",
+            aberta:   "Janela Aberta",
+            quebrada: "Janela Quebrada"
+        };
+
+        function setEstado(estado) {
+            document.getElementById("janela").src = imagens[estado];
+            document.getElementById("janela").alt = titulos[estado];
+            document.getElementById("titulo").innerHTML = titulos[estado];
+        }
+
+        function abrirJanela() {
+            setEstado("aberta");
+        }
+
+        function fecharJanela() {
+            setEstado("fechada");
+        }
+
+        function quebrarJanela() {
+            setEstado("quebrada");
+        }
+    </script>
+</head>
+
+<body>
+
+    <h1 id="titulo">Janela Fechada</h1>
+
+    <img
+        id="janela"
+        src="janela_fechada.png"
+        alt="Janela Fechada"
+        onmouseover="abrirJanela()"
+        onmouseout="fecharJanela()"
+        onclick="quebrarJanela()"
+    />
+
+    <p>Passe o mouse sobre a imagem para abrir a janela.</p>
+    <p>Tire o mouse para fechar. Clique para quebrar!</p>
+
+</body>
+
+</html>

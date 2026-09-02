@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Cursos Fatec Sorocaba</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Selecione um Curso da Fatec Sorocaba</h2>
+        
+        <select id="cursos" onchange="abrirCurso(this)">
+            <option value="">-- Escolha um curso --</option>
+            
+            <optgroup label="Presencial">
+                <option value="ads">Análise e Desenvolvimento de Sistemas</option>
+                <option value="automacao">Automação Industrial</option>
+                <option value="eletrotecnica">Eletrônica Automotiva</option>
+                <option value="fabricacao">Fabricação Mecânica</option>
+                <option value="qualidade">Gestão de Qualidade</option>
+                <option value="logistica">Logística</option>
+                <option value="manufatura">Manufatura Avançada</option>
+                <option value="aeronaves">Manutenção de Aeronaves</option>
+                <option value="polimeros">Polímeros</option>
+                <option value="metalurgicos">Processos Metalúrgicos</option>
+                <option value="projetos">Projetos Mecânicos</option>
+                <option value="biomedicos">Sistemas Biomédicos</option>
+            </optgroup>
+
+            <optgroup label="EAD">
+                <option value="empresarial">Gestão Empresarial</option>
+            </optgroup>
+
+            <optgroup label="AMS">
+                <option value="ams_ds">Desenvolvimento de Sistemas AMS</option>
+                <option value="ams_log">Logística AMS</option>
+            </optgroup>
+        </select>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

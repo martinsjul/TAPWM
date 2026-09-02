@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Triângulos</title>
+    <style>
+        body {
+            background-color: #fffafb;
+            color: #5d4037;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(252, 228, 236, 0.8);
+            width: 100%;
+            max-width: 350px;
+            text-align: center;
+            border: 1px solid #fce4ec;
+        }
+
+        h2 {
+            color: #f06292;
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            font-size: 0.85rem;
+            margin-left: 5px;
+            color: #880e4f;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0 16px 0;
+            border: 2px solid #fce4ec;
+            border-radius: 12px;
+            background-color: #fff;
+            color: #5d4037;
+            outline: none;
+            transition: border-color 0.3s;
+            box-sizing: border-box;
+        }
+
+        input:focus {
+            border-color: #f48fb1;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 12px;
+            background-color: #f06292;
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: #ec407a;
+            transform: translateY(-2px);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+
+        #resultado {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 12px;
+            background-color: #fdf2f5;
+            font-size: 0.95rem;
+            min-height: 20px;
+            border-left: 4px solid #f06292;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Verificador de Triângulo</h2>
+        <label>Lado A:</label>
+        <input type="number" id="ladoA" placeholder="Ex: 10">
+        <label>Lado B:</label>
+        <input type="number" id="ladoB" placeholder="Ex: 10">
+        <label>Lado C:</label>
+        <input type="number" id="ladoC" placeholder="Ex: 10">
+
+        <button onclick="processar()">Verificar Tipo</button>
+
+        <div id="resultado"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
